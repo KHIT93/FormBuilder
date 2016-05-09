@@ -1,0 +1,13 @@
+{
+    "name": "laracore/formbuilder",
+    "version": "dev-master",
+    "license": "MIT",
+    "autoload": {
+        "psr-4" : {
+            "LaracoreComponent\\FormBuilder\\" : "src/"
+        }
+    },
+    "require": {
+        "laravelcollective/html": "5.1.*"
+    }
+}
