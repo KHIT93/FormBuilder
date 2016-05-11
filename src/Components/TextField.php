@@ -1,7 +1,9 @@
 <?php
+
 namespace LaracoreComponent\FormBuilder\Components;
 
 use LaracoreComponent\FormBuilder\BaseFormComponent;
+use LaracoreComponent\FormBuilder\Exceptions\InvalidComponentTypeException;
 
 class TextField extends BaseFormComponent
 {
@@ -11,7 +13,7 @@ class TextField extends BaseFormComponent
 	{
 		if($this->type != 'text')
 		{
-			throw new LaracoreComponent\FormBuilder\Exceptions\InvalidComponentTypeException("", 0, null, $this);
+			throw new InvalidComponentTypeException("", 0, null, $this);
 		}
 	}
 

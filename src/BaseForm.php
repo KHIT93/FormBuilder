@@ -4,10 +4,10 @@ namespace LaracoreComponent\FormBuilder;
 
 class BaseForm
 {
-	protected array $components;
-	protected object $model;
-	protected array $attributes;
-	protected string $method;
+	protected $components;
+	protected $model;
+	protected $attributes;
+	protected $method;
 	public static $types = [
 		'GET',
 		'POST',

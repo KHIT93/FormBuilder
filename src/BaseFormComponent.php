@@ -4,13 +4,14 @@ namespace LaracoreComponent\FormBuilder;
 
 abstract class BaseFormComponent
 {
-	protected array $attributes = ['class' => 'form-control'];
-	protected bool $required;
-	protected bool $disabled;
-	abstract protected string $type;
-	protected string $name;
-	protected string $display_name;
-	protected array $wrapper_attributes;
+	protected $attributes = ['class' => 'form-control'];
+	protected $required;
+	protected $disabled;
+	protected $type;
+	protected $name;
+	protected $display_name;
+	protected $wrapper_attributes;
+	protected $default_value = null;
 	/**
 	 * Validate that the component is structured correctly
 	 */
@@ -23,6 +24,16 @@ abstract class BaseFormComponent
 	{
 		return view('components.component');
 	}
+
+    public function defaultValue($default = null)
+    {
+        if($default)
+        {
+            $this->default_value = $default;
+            return $this;
+        }
+        return $this->default_value;
+    }
 
 	public function name($name = null)
 	{
