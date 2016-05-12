@@ -6,13 +6,13 @@ use LaracoreComponent\FormBuilder\BaseFormComponent;
 use LaracoreComponent\FormBuilder\Exceptions\InvalidComponentTypeException;
 use LaracoreComponent\FormBuilder\Exceptions\PropertyNotSupportedException;
 
-class Button extends BaseFormComponent
+class StaticField extends BaseFormComponent
 {
-	protected $type = 'button';
+	protected $type = 'static';
 
 	public function validate()
 	{
-		if($this->type != 'button')
+		if($this->type != 'static')
 		{
 			throw new InvalidComponentTypeException("", 0, null, $this);
 		}
@@ -20,9 +20,9 @@ class Button extends BaseFormComponent
 
 	public function render()
 	{
-		return view('components.button');
+		return view('components.staticfield');
 	}
-	
+
 	public function defaultValue($default = null)
     {
         throw new PropertyNotSupportedException("The property default_value is not supported with the password field", 0, null, $this);

@@ -4,6 +4,7 @@ namespace LaracoreComponent\FormBuilder\Components;
 
 use LaracoreComponent\FormBuilder\BaseFormComponent;
 use LaracoreComponent\FormBuilder\Exceptions\InvalidComponentTypeException;
+use LaracoreComponent\FormBuilder\Exceptions\PropertyNotSupportedException;
 
 class ImageField extends BaseFormComponent
 {
