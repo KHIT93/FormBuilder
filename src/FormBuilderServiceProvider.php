@@ -14,9 +14,10 @@ class FormBuilderServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__.'/../views');
+        $this->package('laracore/formbuilder', null, __DIR__);
+        $this->loadViewsFrom(__DIR__.'/views');
         $this->publishes([
-            __DIR__.'/../views' => base_path('resources/views/vendor/laracore/formbuilder');
+            __DIR__.'/views' => base_path('resources/views/vendor/formbuilder')
         ]);
     }
 
