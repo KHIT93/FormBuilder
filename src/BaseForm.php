@@ -28,7 +28,10 @@ class BaseForm
 	{
 		if(is_array($component))
 		{
-			//Process array and create FormComponemtObject
+			foreach ($component as $entry)
+			{
+				$this->addComponent($entry);
+			}
 		}
 		else if(is_object($component) && $component instanceof BaseFormComponent)
 		{
@@ -46,7 +49,10 @@ class BaseForm
 
 	public function renderAttributes()
 	{
+		$render = $this->attributes;
+		$render['method'] = $this->method;
 
+		return $render;
 	}
 
 	public function method($method = 'POST')
