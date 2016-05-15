@@ -45,7 +45,7 @@ abstract class BaseFormComponent
 	 */
 	public function render()
 	{
-		return view($this->view, ['component' => $this]);
+		return view('formbuilder::'.$this->view, ['component' => $this]);
 	}
 
     public function defaultValue($default = null)

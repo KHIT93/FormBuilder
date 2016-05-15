@@ -87,6 +87,6 @@ class BaseForm
 
 	public function render()
 	{
-		return view('form', ['form' => $this]);
+		return view('formbuilder::form', ['form' => $this]);
 	}
 }
