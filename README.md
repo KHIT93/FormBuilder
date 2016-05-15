@@ -23,3 +23,53 @@ We use the Facades from Laravel Collective.
 ## Usage
 
 All Bootstrap recommendations for form and input elements are predefined in the provided classes and just have to be used or you can override them and provide your own.
+
+Create a new form
+	
+	$form = new FormBuilder();
+
+Add a component
+	
+	$form->addComponent(new TextField('name', 'Name'));
+
+Render the form
+	
+	$form->render();
+
+Adding multiple components at once
+	
+	$components = [
+		new TextField('name', 'Name'),
+		new PasswordField('password', 'Password'),
+		new PasswordField('confirm_password' 'Confirm your password'),
+		new SubmitButton('Register user')
+	];
+
+	$form->addComponent($components);
+
+Create form using named constructor
+
+	$model = new App\User();
+	$form = FormBuilder::create('POST', ['class' => 'form-horizontal', 'role' => 'form'], $model);
+
+	$components = [
+		new TextField('name', 'Name'),
+		new PasswordField('password', 'Password'),
+		new PasswordField('confirm_password' 'Confirm your password'),
+		new SubmitButton('Register user')
+	];
+
+	$form->addComponent($components);
+
+Create form and add components using named constructor
+
+	$model = new App\User();
+
+	$components = [
+		new TextField('name', 'Name'),
+		new PasswordField('password', 'Password'),
+		new PasswordField('confirm_password' 'Confirm your password'),
+		new SubmitButton('Register user')
+	];
+
+	$form = FormBuilder::create('POST', ['class' => 'form-horizontal', 'role' => 'form'], $model, $components);
