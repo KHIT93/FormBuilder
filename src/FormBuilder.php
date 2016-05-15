@@ -1,6 +1,6 @@
 <?php
 
-namespace Laracore\FormBuilder;
+namespace LaracoreComponent\FormBuilder;
 
 class FormBuilder
 {
