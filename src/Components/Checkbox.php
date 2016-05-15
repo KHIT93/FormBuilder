@@ -8,6 +8,7 @@ use LaracoreComponent\FormBuilder\Exceptions\InvalidComponentTypeException;
 class Checkbox extends BaseFormComponent
 {
 	protected $type = 'checkbox';
+	protected $view = 'components.checkbox';
 
 	public function validate()
 	{
@@ -15,11 +16,6 @@ class Checkbox extends BaseFormComponent
 		{
 			throw new InvalidComponentTypeException("", 0, null, $this);
 		}
-	}
-
-	public function render()
-	{
-		return view('components.checkbox');
 	}
 
 	public function checked($checked = null)

@@ -9,6 +9,7 @@ use LaracoreComponent\FormBuilder\Exceptions\InvalidComponentTypeException;
 class EmailField extends BaseFormComponent
 {
     protected $type = 'email';
+    protected $view = 'components.email';
 
     public function validate()
     {
@@ -16,10 +17,5 @@ class EmailField extends BaseFormComponent
         {
             throw new InvalidComponentTypeException("", 0, null, $this);
         }
-    }
-
-    public function render()
-    {
-        return view('components.email');
     }
 }

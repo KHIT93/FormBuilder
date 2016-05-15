@@ -8,6 +8,7 @@ use LaracoreComponent\FormBuilder\Exceptions\InvalidComponentTypeException;
 class Radio extends BaseFormComponent
 {
 	protected $type = 'radio';
+	protected $view = 'components.radio';
 
 	public function validate()
 	{
@@ -15,11 +16,6 @@ class Radio extends BaseFormComponent
 		{
 			throw new InvalidComponentTypeException("", 0, null, $this);
 		}
-	}
-
-	public function render()
-	{
-		return view('components.radio');
 	}
 
 	public function checked($checked = null)

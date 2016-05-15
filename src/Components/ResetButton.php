@@ -4,20 +4,16 @@ namespace LaracoreComponent\FormBuilder\Components;
 
 use LaracoreComponent\FormBuilder\Exceptions\InvalidComponentTypeException;
 
-class Submit extends Button
+class ResetButton extends Button
 {
-	protected $type = 'submit';
+	protected $type = 'reset';
+	protected $view = 'components.resetbutton';
 
 	public function validate()
 	{
-		if($this->type != 'submit')
+		if($this->type != 'reset')
 		{
 			throw new InvalidComponentTypeException("", 0, null, $this);
 		}
-	}
-
-	public function render()
-	{
-		return view('components.submit');
 	}
 }

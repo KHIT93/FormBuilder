@@ -8,6 +8,7 @@ use LaracoreComponent\FormBuilder\Exceptions\InvalidComponentTypeException;
 class Telephone extends BaseFormComponent
 {
 	protected $type = 'tel';
+	protected $view = 'components.telephone';
 
 	public function validate()
 	{
@@ -15,10 +16,5 @@ class Telephone extends BaseFormComponent
 		{
 			throw new InvalidComponentTypeException("", 0, null, $this);
 		}
-	}
-
-	public function render()
-	{
-		return view('components.telephone');
 	}
 }

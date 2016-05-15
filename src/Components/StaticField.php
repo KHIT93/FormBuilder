@@ -9,6 +9,7 @@ use LaracoreComponent\FormBuilder\Exceptions\PropertyNotSupportedException;
 class StaticField extends BaseFormComponent
 {
 	protected $type = 'static';
+	protected $view = 'components.staticfield';
 
 	public function validate()
 	{
@@ -16,11 +17,6 @@ class StaticField extends BaseFormComponent
 		{
 			throw new InvalidComponentTypeException("", 0, null, $this);
 		}
-	}
-
-	public function render()
-	{
-		return view('components.staticfield');
 	}
 
 	public function defaultValue($default = null)

@@ -8,6 +8,7 @@ use LaracoreComponent\FormBuilder\Exceptions\InvalidComponentTypeException;
 class TextField extends BaseFormComponent
 {
 	protected $type = 'select';
+	protected $view = 'components.select';
 	protected $list = [];
 
 	public function validate()
@@ -26,10 +27,5 @@ class TextField extends BaseFormComponent
 			return $this;
 		}
 		return $this->list;
-	}
-
-	public function render()
-	{
-		return view('components.select');
 	}
 }

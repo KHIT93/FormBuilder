@@ -12,6 +12,7 @@ abstract class BaseFormComponent
 	protected $display_name;
 	protected $wrapper_attributes;
 	protected $default_value = null;
+	protected $view = 'components.component';
 	/**
 	 * Validate that the component is structured correctly
 	 */
@@ -22,7 +23,7 @@ abstract class BaseFormComponent
 	 */
 	public function render()
 	{
-		return view('components.component');
+		return view($this->view, $this);
 	}
 
     public function defaultValue($default = null)

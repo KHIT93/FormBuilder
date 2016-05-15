@@ -9,6 +9,7 @@ use LaracoreComponent\FormBuilder\Exceptions\PropertyNotSupportedException;
 class MarkupField extends BaseFormComponent
 {
 	protected $type = 'markup';
+	protected $view = 'components.markupfield';
 
 	public function validate()
 	{
@@ -16,11 +17,6 @@ class MarkupField extends BaseFormComponent
 		{
 			throw new InvalidComponentTypeException("", 0, null, $this);
 		}
-	}
-
-	public function render()
-	{
-		return view('components.markupfield');
 	}
 
 	public function defaultValue($default = null)

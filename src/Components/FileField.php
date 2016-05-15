@@ -5,21 +5,17 @@ use LaracoreComponent\FormBuilder\BaseFormComponent;
 use LaracoreComponent\FormBuilder\Exceptions\InvalidComponentTypeException;
 use LaracoreComponent\FormBuilder\Exceptions\PropertyNotSupportedException;
 
-class PasswordField extends BaseFormComponent
+class FileField extends BaseFormComponent
 {
-	protected $type = 'password';
+	protected $type = 'file';
+	protected $view = 'components.filefield';
 
 	public function validate()
 	{
-		if($this->type != 'password')
+		if($this->type != 'file')
 		{
 			throw new InvalidComponentTypeException("", 0, null, $this);
 		}
-	}
-
-	public function render()
-	{
-		return view('components.passwordfield');
 	}
 
 	public function defaultValue($default = null)

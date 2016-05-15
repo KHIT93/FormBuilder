@@ -8,6 +8,7 @@ use LaracoreComponent\FormBuilder\Exceptions\PropertyNotSupportedException;
 class PasswordField extends BaseFormComponent
 {
 	protected $type = 'password';
+	protected $view = 'components.passwordfield';
 
 	public function validate()
 	{
@@ -15,11 +16,6 @@ class PasswordField extends BaseFormComponent
 		{
 			throw new InvalidComponentTypeException("", 0, null, $this);
 		}
-	}
-
-	public function render()
-	{
-		return view('components.passwordfield');
 	}
 
 	public function defaultValue($default = null)

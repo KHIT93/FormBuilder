@@ -9,6 +9,7 @@ use LaracoreComponent\FormBuilder\Exceptions\InvalidComponentTypeException;
 class Textarea extends BaseFormComponent
 {
     protected $type = 'textarea';
+    protected $view = 'components.textarea';
 
     public function validate()
     {
@@ -16,10 +17,5 @@ class Textarea extends BaseFormComponent
         {
             throw new InvalidComponentTypeException("", 0, null, $this);
         }
-    }
-    //{!! Form::textarea('content[body]', null, ['class' => 'form-control ckeditor', 'required']) !!}
-    public function render()
-    {
-        return view('components.textarea');
     }
 }

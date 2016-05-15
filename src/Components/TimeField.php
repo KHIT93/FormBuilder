@@ -8,6 +8,7 @@ use LaracoreComponent\FormBuilder\Exceptions\InvalidComponentTypeException;
 class TimeField extends BaseFormComponent
 {
 	protected $type = 'time';
+	protected $view = 'components.timefield';
 
 	public function validate()
 	{
@@ -15,10 +16,5 @@ class TimeField extends BaseFormComponent
 		{
 			throw new InvalidComponentTypeException("", 0, null, $this);
 		}
-	}
-
-	public function render()
-	{
-		return view('components.timefield');
 	}
 }

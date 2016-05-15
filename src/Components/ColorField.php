@@ -8,6 +8,7 @@ use LaracoreComponent\FormBuilder\Exceptions\InvalidComponentTypeException;
 class Color extends BaseFormComponent
 {
 	protected $type = 'color';
+	protected $view = 'components.color';
 
 	public function validate()
 	{
@@ -15,10 +16,5 @@ class Color extends BaseFormComponent
 		{
 			throw new InvalidComponentTypeException("", 0, null, $this);
 		}
-	}
-
-	public function render()
-	{
-		return view('components.colorfield');
 	}
 }

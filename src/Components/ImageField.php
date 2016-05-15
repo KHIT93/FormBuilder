@@ -9,7 +9,8 @@ use LaracoreComponent\FormBuilder\Exceptions\PropertyNotSupportedException;
 class ImageField extends BaseFormComponent
 {
 	protected $type = 'image';
-	protectec $url;
+	protected $view = 'components.imagefield';
+	protected $url;
 
 	public function validate()
 	{
@@ -17,11 +18,6 @@ class ImageField extends BaseFormComponent
 		{
 			throw new InvalidComponentTypeException("", 0, null, $this);
 		}
-	}
-
-	public function render()
-	{
-		return view('components.imagefield');
 	}
 
 	public function url($url = null)

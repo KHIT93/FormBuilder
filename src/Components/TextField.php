@@ -8,6 +8,7 @@ use LaracoreComponent\FormBuilder\Exceptions\InvalidComponentTypeException;
 class TextField extends BaseFormComponent
 {
 	protected $type = 'text';
+	protected $view = 'components.textfield';
 
 	public function validate()
 	{

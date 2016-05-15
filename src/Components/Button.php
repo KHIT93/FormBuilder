@@ -9,6 +9,7 @@ use LaracoreComponent\FormBuilder\Exceptions\PropertyNotSupportedException;
 class Button extends BaseFormComponent
 {
 	protected $type = 'button';
+	protected $view = 'components.button';
 
 	public function validate()
 	{
@@ -16,11 +17,6 @@ class Button extends BaseFormComponent
 		{
 			throw new InvalidComponentTypeException("", 0, null, $this);
 		}
-	}
-
-	public function render()
-	{
-		return view('components.button');
 	}
 	
 	public function defaultValue($default = null)

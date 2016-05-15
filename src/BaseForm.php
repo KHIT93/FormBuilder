@@ -54,8 +54,19 @@ class BaseForm
 		if(in_array(strtoupper($method), self::types))
 		{
 			$this->method = $method;
+			return $this;
 		}
 		return $this->method;
+	}
+
+	public function attributes(array $attributes = null)
+	{
+		if(is_array($attributes))
+		{
+			$this->attributes;
+			return $this;
+		}
+		return $this->attributes;
 	}
 
 	public function getModel()
