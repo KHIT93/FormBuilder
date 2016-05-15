@@ -1,7 +1,6 @@
 {
     "name": "laracore/formbuilder",
     "description": "Laravel 5.x FormBuilder for Blade Engine based on Bootstrap 3",
-    "version": "dev-master",
     "license": "MIT",
     "autoload": {
         "psr-4" : {
@@ -10,7 +9,7 @@
     },
     "require": {
         "php": ">= 5.5.9",
-        "laravelcollective/html": ">= 5.1.*",
-        "illuminate/support": ">= 5.1.*"
+        "laravelcollective/html": "5.1.*",
+        "illuminate/support": "5.1.*"
     }
 }
