@@ -8,7 +8,7 @@ class BaseForm
 	protected $model;
 	protected $attributes;
 	protected $method;
-	public static $types = [
+	const $types = [
 		'GET',
 		'POST',
 		'PUT',

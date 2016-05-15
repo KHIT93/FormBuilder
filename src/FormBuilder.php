@@ -9,7 +9,7 @@ class FormBuilder
 		$form = new BaseForm($model);
 		if(in_array(strtoupper($method), BaseForm::types))
 		{
-			$form->metod($method);
+			$form->method($method);
 		}
 		if(count($attributes))
 		{

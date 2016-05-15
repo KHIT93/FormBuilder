@@ -19,7 +19,7 @@ class TextField extends BaseFormComponent
 		}
 	}
 
-	public function list($list = null)
+	public function options_list($list = null)
 	{
 		if(is_array($list))
 		{
