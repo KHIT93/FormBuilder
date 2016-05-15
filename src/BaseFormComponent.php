@@ -5,8 +5,6 @@ namespace LaracoreComponent\FormBuilder;
 abstract class BaseFormComponent
 {
 	protected $attributes = ['class' => 'form-control'];
-	protected $required;
-	protected $disabled;
 	protected $type;
 	protected $name;
 	protected $display_name;
@@ -17,6 +15,30 @@ abstract class BaseFormComponent
 	 * Validate that the component is structured correctly
 	 */
 	abstract public function validate();
+
+	public function __construct($name = null, $display_name = null, $default_value = null, array $attributes = [], array $wrapper_attributes = [])
+	{
+		if($name)
+		{
+			$this->name = $name;
+		}
+		if($display_name)
+		{
+			$this->display_name = $display_name;
+		}
+		if($default_value)
+		{
+			$this->default_value = $default_value;
+		}
+		if(count($attributes))
+		{
+			$this->attributes = $attributes;
+		}
+		if(count($wrapper_attributes))
+		{
+			$this->wrapper_attributes = $wrapper_attributes;
+		}
+	}
 
 	/**
 	 * Renders the component using LaravelCollective\Html
