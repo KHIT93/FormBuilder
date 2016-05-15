@@ -4,9 +4,9 @@ namespace LaracoreComponent\FormBuilder;
 
 class FormMethods
 {
-	public static const $GET = 'GET';
-	public static const $POST = 'POST';
-	public static const $PUT = 'PUT';
-	public static const $PATCH = 'PATCH';
-	public static const $DELETE = 'DELETE';
+	const $GET = 'GET';
+	const $POST = 'POST';
+	const $PUT = 'PUT';
+	const $PATCH = 'PATCH';
+	const $DELETE = 'DELETE';
 }
