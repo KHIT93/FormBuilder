@@ -3,6 +3,15 @@ Laravel 5.1 FormBuilder for Blade Engine, based on Bootstrap 3 and used in [Lara
 
 This FormBuilder allows for creation of HTML forms using objects and renders them using the [Laravel Collective FormBuilder](https://github.com/LaravelCollective/html) and the [Bootstrap CSS Framework](http://getbootstrap.com).
 
+##Features
+- Object to HTML mapping based on the Bootstrap framework
+
+- Modifiable views for each form component
+
+- Support for Laravel Form Model Binding
+
+- Extensible API for an easy way to add new components
+
 ## Installation
 
 	$> composer require "laracore/formbuilder:dev-master"
