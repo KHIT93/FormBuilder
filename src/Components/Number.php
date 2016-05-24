@@ -16,5 +16,6 @@ class Number extends BaseFormComponent
         {
             throw new InvalidComponentTypeException("", 0, null, $this);
         }
+		return true;
     }
 }

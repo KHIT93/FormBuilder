@@ -15,5 +15,6 @@ class SubmitButton extends Button
 		{
 			throw new InvalidComponentTypeException("", 0, null, $this);
 		}
+		return true;
 	}
 }

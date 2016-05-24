@@ -16,10 +16,6 @@ class HiddenField extends BaseFormComponent
 		{
 			throw new InvalidComponentTypeException("", 0, null, $this);
 		}
-	}
-
-	public function render()
-	{
-		return view('components.hiddenfield');
+		return true;
 	}
 }

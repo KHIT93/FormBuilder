@@ -18,6 +18,7 @@ class ImageField extends BaseFormComponent
 		{
 			throw new InvalidComponentTypeException("", 0, null, $this);
 		}
+		return true;
 	}
 
 	public function url($url = null)

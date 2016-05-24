@@ -39,6 +39,10 @@ class BaseForm
 			{
 				return false;
 			}
+			else
+			{
+				$this->components[] = $component;
+			}
 		}
 		else
 		{

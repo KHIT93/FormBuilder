@@ -17,6 +17,7 @@ class TextField extends BaseFormComponent
 		{
 			throw new InvalidComponentTypeException("", 0, null, $this);
 		}
+		return true;
 	}
 
 	public function options_list($list = null)
