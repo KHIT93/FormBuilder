@@ -1,4 +1,4 @@
-@if($form->model)
+@if($form->getModel())
 {!! Form::model($form->getModel(), $form->renderAttributes()) !!}
 @else
 {!! Form::open($form->renderAttributes()) !!}
