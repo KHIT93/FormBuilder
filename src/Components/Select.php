@@ -5,7 +5,7 @@ namespace LaracoreComponent\FormBuilder\Components;
 use LaracoreComponent\FormBuilder\BaseFormComponent;
 use LaracoreComponent\FormBuilder\Exceptions\InvalidComponentTypeException;
 
-class TextField extends BaseFormComponent
+class Select extends BaseFormComponent
 {
 	protected $type = 'select';
 	protected $view = 'components.select';
