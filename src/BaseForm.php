@@ -4,7 +4,7 @@ namespace LaracoreComponent\FormBuilder;
 
 class BaseForm
 {
-	protected $components;
+	protected $components = [];
 	protected $model;
 	protected $attributes;
 	protected $method;
